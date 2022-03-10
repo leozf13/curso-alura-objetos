@@ -27,7 +27,7 @@ console.log(cliente.dependentes)
 
 //console.log(cliente.dependentes)
 
-const dependenteNova = cliente.dependentes.filter(dependente => dependente.dataNasc === "01/02/2021") // filter ppara achar a dependente nascina em 2021
+const dependenteNova = cliente.dependentes.filter(dependente => dependente.dataNasc === "01/02/2021") // filter ppara achar a dependente nascida em 2021
 
 console.log(dependenteNova) // imprime o novo array dependenteNova, com todas as informações
 
