@@ -36,9 +36,9 @@ const cliente = { //Objeto Cliente
     }
 }
 
-function ofereceSeguro(objeto) {
-    const chavesClientes = Object.keys(objeto);
-    if(chavesClientes.includes("dependentes")){
+function ofereceSeguro(objeto) { //Função para criar uma mensagem de alerta caso o cliente tenha dependentes
+    const chavesClientes = Object.keys(objeto); //Object.keys pega toda as chaves do objeto passado como parâmetro e as armazena na variável chavesClientes
+    if(chavesClientes.includes("dependentes")){ //O método includes verifica se o parâmetro 'dependentes' existe dentro do array de chaves chavesClientes, retorna true or false
         console.log(`${objeto.nome}. Você possui uma oferta de seguro!`)
     }else {
         console.log(`${objeto.nome}, você não possui ofertas de seguro no momento.`)
@@ -47,3 +47,6 @@ function ofereceSeguro(objeto) {
 
 ofereceSeguro(cliente);
 
+console.log(Object.values(cliente)) // Object.values mostra todos os valores armazenados no objeto cliente
+
+console.log(Object.entries(cliente)) // Object.entries retorna em formato de array o nome das chaves e seus respectivos valores
