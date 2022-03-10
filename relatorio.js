@@ -36,7 +36,7 @@ const cliente = { //Objeto Cliente
     }
 }
 
-/*function gerarRelatorio(objeto) {
+function gerarRelatorio(objeto) { //função para gerar relatórios de dados do cliente
 
     let relatorio = "";
 
@@ -49,11 +49,11 @@ const cliente = { //Objeto Cliente
             `; //template string aceita a quebra de linha
         }
     }
-    return objeto;
-}*/
+return relatorio;
+}
 
 
 
-//console.log(gerarRelatorio(cliente)) //impressão do relatório para o usuário
+console.log(gerarRelatorio(cliente)) //impressão do relatório para o usuário
 
-cliente.sacar(201);
+cliente.sacar(51);
