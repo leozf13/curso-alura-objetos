@@ -36,19 +36,24 @@ const cliente = { //Objeto Cliente
     }
 }
 
-let relatorio = "";
+/*function gerarRelatorio(objeto) {
 
-for(let info in cliente){ // criei a variável info que vai armazenar o nome das chaves de cliente e vai percorres todas as chaves
-    if(typeof cliente[info] === "object" || typeof cliente[info] === "function"){
-        continue; //não vai fazer nada
-    }else{
-        relatorio += `  
-        ${info}: ${cliente[info]}
-        `; //template string aceita a quebra de linha
+    let relatorio = "";
+
+    for(let info in objeto){ // criei a variável info que vai armazenar o nome das chaves de cliente e vai percorres todas as chaves
+        if(typeof objeto[info] === "object" || typeof objeto[info] === "function"){
+            continue; //não vai fazer nada
+        }else{
+            relatorio += `  
+            ${info}: ${objeto[info]}
+            `; //template string aceita a quebra de linha
+        }
     }
-}
+    return objeto;
+}*/
 
-console.log(relatorio) //impressão do relatório para o usuário
+
+
+//console.log(gerarRelatorio(cliente)) //impressão do relatório para o usuário
 
 cliente.sacar(201);
-
