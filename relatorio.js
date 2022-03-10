@@ -40,13 +40,13 @@ function gerarRelatorio(objeto) { //função para gerar relatórios de dados do 
 
     let relatorio = "";
 
-    for(let info in objeto){ // criei a variável info que vai armazenar o nome das chaves de cliente e vai percorres todas as chaves
-        if(typeof objeto[info] === "object" || typeof objeto[info] === "function"){
+    for(let info in objeto){ // criei a variável info que vai armazenar o nome das chaves de cliente e vai percorrer todas as chaves
+        if(typeof objeto[info] === "object" || typeof objeto[info] === "function"){ //verifica se a chave não é do tipo objeto ou função
             continue; //não vai fazer nada
         }else{
-            relatorio += `  
+            relatorio += `          
             ${info}: ${objeto[info]}
-            `; //template string aceita a quebra de linha
+            `; //template string aceita a quebra de linha //relatório recebe as chaves e valores de chaves do objeto cliente
         }
     }
 return relatorio;
