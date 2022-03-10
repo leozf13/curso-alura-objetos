@@ -56,4 +56,4 @@ return relatorio;
 
 console.log(gerarRelatorio(cliente)) //impressão do relatório para o usuário
 
-cliente.sacar(51);
+cliente.sacar(515);
