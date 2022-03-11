@@ -48,7 +48,7 @@ let armazenaChaves = clientes.map(cliente => { //Arrow function que armazena o n
 console.log(armazenaChaves);
 
 let listaDependentes = clientes.map(cliente => { //Arrow function utilizando o método map para espalhar o conteúdo da chave dependentes do objeto cliente para a variavel listaDependentes
-    let dependentes = [...cliente.dependentes];
+    let dependentes = [...cliente.dependentes, ...cliente[+1].dependentes];
     return dependentes;
 })
 
@@ -56,6 +56,3 @@ const imprimeDependentes = listaDependentes.forEach(dependentes => { //arrow fun
     console.log(dependentes)
 })
 
-for(let i = 0; i < listaDependentes.length; i++){
-    console.table(listaDependentes[i]);
-}
