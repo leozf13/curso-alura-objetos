@@ -52,6 +52,10 @@ let listaDependentes = clientes.map(cliente => { //Arrow function utilizando o m
     return dependentes;
 })
 
-const imprimeDependentes = listaDependentes.forEach(dependentes => {
+const imprimeDependentes = listaDependentes.forEach(dependentes => { //arrow function utilizando o método forEach para imprimir os valores armazenados em listaDependentes
     console.log(dependentes)
 })
+
+for(let i = 0; i < listaDependentes.length; i++){
+    console.table(listaDependentes[i]);
+}
