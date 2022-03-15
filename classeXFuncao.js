@@ -73,5 +73,24 @@ starwars.anunciaTitulo();
 starwars.anunciaEditora();
 starwars.anunciaPaginas();
 
-const senhorAneis = 
+console.log(typeof Livros) // Mostrando que classes no JS são reconhecidas como funcções
+                          // Acúcar sintático
 
+//Classes não são hoistings, não podem ser chamadas antes de serem declaradas, diferentemente das funções
+
+class LivrosColecao extends Livros {
+    constructor(nome, editora, nomeColecao){
+        super(nome, editora);  //definindo que quero herdar nome e editora da classe Livro
+        this.nomeColecao = nomeColecao;
+    }
+
+    descreverColecao(){
+        console.log(`
+        O livro: ${this.nome} é da editora: ${this.editora} e faz parte da coleção: ${this.nomeColecao}
+        `)
+    }
+}
+
+const senhorAneis = new LivrosColecao("Senhor dos Aneis", "Tolkien", "Livros Infantis");
+
+senhorAneis.descreverColecao();
